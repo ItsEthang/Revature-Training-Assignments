@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <a href="./index.html" style="margin-bottom: 12px; display: block"
+      >Home Page</a
+    >
+    <form method="get">
+      <label for="name">Your name:</label><br />
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="enter your legal name"
+      /><br />
+      <label for="username">Username:</label><br />
+      <input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="enter your username"
+        required
+      /><br />
+      <label for="password">Password:</label><br />
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="password here"
+        required
+      />
+      <br />
+      <label for="gender">Gender?</label><br />
+      <input type="radio" name="gender" value="male" />
+      <label for="male">Male</label>
+      <input type="radio" name="gender" value="female" />
+      <label for="female">Female</label>
+      <br />
+      <label for="major">Your major</label>
+      <select name="major" id="major">
+        <option value="computer science">Computer Science</option>
+        <option value="physic">Physic</option>
+        <option value="math">Math</option>
+      </select>
+      <br />
+      <label for="major">Your major</label>
+      <select name="major" id="major" multiple>
+        <option value="computer science">Computer Science</option>
+        <option value="physic">Physic</option>
+        <option value="math">Math</option>
+      </select>
+      <br />
+      <label for="comment">Comments</label>
+      <textarea name="comment" id="comment" cols="50" rows="5"></textarea>
+      <input type="submit" style="margin-top: 12px; display: block" />
+    </form>
+  </body>
+</html>
