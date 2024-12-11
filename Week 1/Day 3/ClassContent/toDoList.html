@@ -7,11 +7,21 @@
   </head>
   <body>
     <h1>To Do List</h1>
-    <input type="text" id="to-do-input"/>
-    <button>Add to Do</button>
+    <input type="text" id="to-do-input" />
+    <button onclick="addToDo()">Add to Do</button>
     <hr />
-    <ul id="toDoList">
+    <ul id="to-do-list">
       <li>Complete Project 1</li>
     </ul>
+    <script>
+      const toDoInput = document.getElementById("to-do-input");
+      const toDoList = document.getElementById("to-do-list");
+      const addToDo = () => {
+        const listItem = document.createElement("li");
+        listItem.innerText = toDoInput.value;
+        toDoList.appendChild(listItem);
+        toDoInput.value = "";
+      };
+    </script>
   </body>
 </html>
