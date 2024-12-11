@@ -1,0 +1,9 @@
+li.incomplete {
+  color: red;
+}
+li.completed {
+  color: greenyellow;
+}
+ul * {
+  margin: 5px;
+}
