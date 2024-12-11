@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="wrap">
+      DIV
+      <p class="hint">
+        P<br />
+        <a href="#">Click Me!!</a>
+      </p>
+    </div>
+
+    <script>
+      function showTagName() {
+        alert("Capturing: " + this.tagName);
+      }
+
+      var elems = document.querySelectorAll("div, p, a");
+      for (let elem of elems) {
+        elem.addEventListener("click", showTagName, true);
+      }
+    </script>
+  </body>
+</html>

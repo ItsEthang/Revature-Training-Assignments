@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body * {
+        border: 1px solid violet;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- event bubbling -->
+    <form action="" id="my-form">
+      Form Tag
+      <div onclick="alert('Div is clicked')">
+        Div Tag
+        <p onclick="alert('P is clicked!')">P Tag</p>
+      </div>
+    </form>
+    <script>
+      document
+        .getElementById("my-form")
+        .addEventListener("click", () => alert("Form is clicked"), {
+          capture: true,
+        });
+    </script>
+  </body>
+</html>

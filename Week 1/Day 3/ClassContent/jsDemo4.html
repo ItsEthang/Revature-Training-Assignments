@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="header1">Insert element under this header</h1>
+    <button onclick="handleInsert()">Click here</button>
+    <script>
+      let newElement = document.createComment("div");
+      newElement.innerHTML = "<p>new content here</p>";
+      let headerLocation = document.getElementById("header1");
+      const handleInsert = () => {
+        headerLocation.append(newElement);
+      };
+    </script>
+  </body>
+</html>

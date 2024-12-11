@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div onclick="alert('Bubbling: ' + this.tagName)">
+      DIV
+      <p onclick="alert('Bubbling: ' + this.tagName)">
+        P
+        <a href="#" onclick="alert('Bubbling: ' + this.tagName)">Click Me!!</a>
+      </p>
+    </div>
+  </body>
+</html>

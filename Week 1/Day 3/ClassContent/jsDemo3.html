@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      const handleClick = () => {
+        pTags = document.getElementsByTagName("p");
+        pInDiv = document.querySelector("div > p");
+        for (let i = 0; i < pTags.length; i++) {
+          pTags[i].style.backgroundColor = "red";
+        }
+        pInDiv.style.backgroundColor = "blue";
+      };
+    </script>
+  </head>
+  <body>
+    <h1>This is heading</h1>
+    <p>para1</p>
+    <p>para2</p>
+    <div>
+      <p>P inside the div tag</p>
+    </div>
+    <button onclick="handleClick()">Click</button>
+  </body>
+</html>
