@@ -1,9 +1,10 @@
+import { BrowserRouter, Route, Routes } from "react-router";
 import "./App.css";
-import AxiosGetDemo from "./Components/AxiosGetDemo";
 import Kangaroo from "./Components/Kangaroo";
-import ListAndKeys from "./Components/ListAndKeys";
+import Navbar from "./Components/Navbar";
 import Post from "./Components/Post";
 import StateDemo from "./Components/StateDemo";
+import ToDoList from "./Components/toDoList/ToDoList";
 
 function App() {
   return (
@@ -12,7 +13,16 @@ function App() {
       <StateDemo />
       <Post />
       <ListAndKeys /> */}
-      <AxiosGetDemo />
+      {/* <AxiosGetDemo /> */}
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="hello" element={<Kangaroo />} />
+          <Route path="sdc" element={<StateDemo />} />
+          <Route path="posts" element={<Post />} />
+          <Route path="todos" element={<ToDoList />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
