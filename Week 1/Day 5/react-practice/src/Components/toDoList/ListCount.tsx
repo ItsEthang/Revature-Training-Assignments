@@ -1,7 +1,5 @@
-import React from "react";
-
-const ListCount = () => {
-  return <div>ListCount</div>;
+const ListCount = ({ todos }: { todos: string[] }) => {
+  return <div>List item count:{todos.length}</div>;
 };
 
 export default ListCount;

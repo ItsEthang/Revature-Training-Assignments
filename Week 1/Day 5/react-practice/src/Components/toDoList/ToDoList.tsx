@@ -1,34 +1,28 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
+import ListShow from "./ListShow";
+import ListCount from "./ListCount";
+import ListAdd from "./ListAdd";
 
 const ToDoList = () => {
-  const [value, setValue] = useState<string>("");
   const [todos, setTodos] = useState<string[]>([]);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setTodos((prevTodos) => [...prevTodos, value]);
-    setValue("");
+    if (inputRef.current) {
+      setTodos((prevTodos) => [...prevTodos, inputRef.current?.value || ""]);
+      inputRef.current.value = "";
+    } else {
+      console.log("Input field cannot be empty");
+    }
   };
 
-  console.log("rendered");
   return (
-    <>
-      <div>ToDoList</div>
-      <ol>
-        {todos.map((todo, index) => (
-          <li key={index}>{todo}</li>
-        ))}
-      </ol>
-      <div>{todos.length}</div>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={value}
-          onChange={(e) => setValue(e.target.value)}
-        />
-        <button type="submit">Add</button>
-      </form>
-    </>
+    <div className="content">
+      <ListShow todos={todos} />
+      <ListCount todos={todos} />
+      <ListAdd handleSubmit={handleSubmit} ref={inputRef} />
+    </div>
   );
 };
 
