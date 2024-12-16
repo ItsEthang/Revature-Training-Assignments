@@ -1,4 +1,5 @@
 import "./App.css";
+import AxiosGetDemo from "./Components/AxiosGetDemo";
 import Kangaroo from "./Components/Kangaroo";
 import ListAndKeys from "./Components/ListAndKeys";
 import Post from "./Components/Post";
@@ -7,10 +8,11 @@ import StateDemo from "./Components/StateDemo";
 function App() {
   return (
     <>
-      <Kangaroo />
+      {/* <Kangaroo />
       <StateDemo />
       <Post />
-      <ListAndKeys />
+      <ListAndKeys /> */}
+      <AxiosGetDemo />
     </>
   );
 }
